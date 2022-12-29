@@ -55,8 +55,8 @@
 							<PinningSupported>false</PinningSupported>
 							<Window>
 								<Size>
-									<Height>280</Height>
-									<Width>140</Width>
+									<Height>300</Height>
+									<Width>160</Width>
 								</Size>
 							</Window>
 						</GameBarWidget>
