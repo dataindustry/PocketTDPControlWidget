@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
+  IgnorableNamespaces="uap uap3 mp">
+
+  <Identity
+    Name="af16f2a1-f320-4680-a2b9-4a042ddc5cce"
+    Publisher="CN=ryu"
+    Version="1.0.0.0" />
+
+  <mp:PhoneIdentity PhoneProductId="af16f2a1-f320-4680-a2b9-4a042ddc5cce" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>PocketTDPControlWidget</DisplayName>
+    <PublisherDisplayName>ryu</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="PocketTDPControlWidget.App">
+      <uap:VisualElements
+        DisplayName="PocketTDPControlWidget"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png"
+        Description="PocketTDPControlWidget"
+        BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
+        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+      </uap:VisualElements>
+		
+		<Extensions>
+			<uap3:Extension Category="windows.appExtension">
+				<uap3:AppExtension Name="microsoft.gameBarUIExtension"
+								   Id="pockettdpcontrol.dataindustry"
+								   DisplayName="Pocket TDP Control"
+								   Description="pockettdpcontrol"
+								   PublicFolder="GameBar">
+					<uap3:Properties>
+						<GameBarWidget Type="Standard">
+							<HomeMenuVisible>true</HomeMenuVisible>
+							<PinningSupported>false</PinningSupported>
+							<Window>
+								<Size>
+									<Height>280</Height>
+									<Width>140</Width>
+								</Size>
+							</Window>
+						</GameBarWidget>
+					</uap3:Properties>
+				</uap3:AppExtension>
+			</uap3:Extension>
+		</Extensions>
+    </Application>
+	  
+  </Applications>
+
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>
