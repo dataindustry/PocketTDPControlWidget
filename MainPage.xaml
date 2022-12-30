@@ -5,14 +5,13 @@
     xmlns:local="using:PocketTDPControlWidget"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    
-    mc:Ignorable="d" Height="280" Width="140">
+    mc:Ignorable="d" Height="400" Width="200">
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition>
             </RowDefinition>
-            <RowDefinition Height="80">
+            <RowDefinition Height="100">
             </RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -22,25 +21,27 @@
             </ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Slider
-            Name="tdpSlider" 
             Grid.Row="0" Grid.Column="0" 
-            Orientation="Vertical" 
-            TickFrequency="1" TickPlacement="Outside"
-            SnapsTo="Ticks"
-            ValueChanged="TDPSlider_ValueChanged" HorizontalAlignment="Center" VerticalAlignment="Center" Height="200" Minimum="4" Maximum="33" />
+            Orientation="Vertical" TickPlacement="Outside"
+            TickFrequency="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="200" Minimum="3" Maximum="33" 
+            Value="{x:Bind ViewModel.CurrentTDP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1">
-            <Button Content=" 5 W" Width="60" Margin="2" />
-            <Button Content="11 W" Width="60" Margin="2" />
-            <Button Content="15 W" Width="60" Margin="2" />
-            <Button Content="22 W" Width="60" Margin="2" />
+            <Button Content="3" Width="50" Margin="2" Click="AdjustButton_Click" />
+            <Button Content="5" Width="50" Margin="2" Click="AdjustButton_Click" />
+            <Button Content="10" Width="50" Margin="2" Click="AdjustButton_Click" />
+            <Button Content="15" Width="50" Margin="2" Click="AdjustButton_Click" />
+            <Button Content="22" Width="50" Margin="2" Click="AdjustButton_Click" />
+            <Button Content="25" Width="50" Margin="2" Click="AdjustButton_Click" />
+            <Button Content="30" Width="50" Margin="2" Click="AdjustButton_Click" />
+            <Button Content="33" Width="50" Margin="2" Click="AdjustButton_Click" />
         </StackPanel>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0">
-            <TextBlock Text="10 W" Width="60" Margin="2" TextAlignment="Center" />
-            <TextBlock Text="10 W" Width="60" Margin="2" TextAlignment="Center" />
+            <Button Content="{x:Bind ViewModel.CurrentTDP, Mode=OneWay}" Width="60" Margin="2" />
+            <Button Content="Setting" Width="60" Margin="2" FontSize="10" IsEnabled="False" />
         </StackPanel>
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1">
-            <Button Content="22 W" Width="60" Margin="2"  />
-            <Button Content="设定" Width="60" Margin="2" Click="Button_Click" />
+        <StackPanel Margin="0" Padding="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1">
+            <Button Content="{x:Bind ViewModel.PresetTDP, Mode=OneWay}" Width="60" Margin="2" Click="AdjustButton_Click" />
+            <Button Content="Save" Width="60" Margin="2" FontSize="10" Click="SaveButton_Click" />
         </StackPanel>
     </Grid>
 </Page>
