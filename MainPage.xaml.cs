@@ -16,7 +16,6 @@ namespace PocketTDPControlWidget
         private ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
 
         ConcurrentQueue<int> TDPQueue = new ConcurrentQueue<int>();
-        ConcurrentQueue<bool> ResultQueue = new ConcurrentQueue<bool>();
 
         public MainPage()
         {

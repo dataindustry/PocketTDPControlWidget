@@ -36,7 +36,7 @@
             <Button Content="33" Width="50" Margin="2" Click="AdjustButton_Click" />
         </StackPanel>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0">
-            <Button Content="{x:Bind ViewModel.CurrentTDP, Mode=OneWay}" Width="60" Margin="2" />
+            <Button Content="{x:Bind ViewModel.CurrentTDP, Mode=OneWay}" Width="60" Margin="2" IsEnabled="False" />
             <Button Content="Setting" Width="60" Margin="2" FontSize="10" IsEnabled="False" />
         </StackPanel>
         <StackPanel Margin="0" Padding="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1">
