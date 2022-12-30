@@ -40,7 +40,7 @@
         </StackPanel>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1">
             <Button Content="22 W" Width="60" Margin="2"  />
-            <Button Content="设定" Width="60" Margin="2" />
+            <Button Content="设定" Width="60" Margin="2" Click="Button_Click" />
         </StackPanel>
     </Grid>
 </Page>

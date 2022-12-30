@@ -1,10 +1,13 @@
-﻿using System;
+﻿using PocketTDPControlWidget.MainServiceReference;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -29,6 +32,14 @@ namespace PocketTDPControlWidget
         private void TDPSlider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
         {
             double a = e.NewValue;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var client = new MainServiceClient();
+
+            client.AdjustAsync("a", 15000);
+            
         }
     }
 }
