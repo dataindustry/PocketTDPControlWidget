@@ -9,14 +9,14 @@
 
 	<Identity
 	  Name="af16f2a1-f320-4680-a2b9-4a042ddc5cce"
-	  Publisher="CN=ryu"
-	  Version="1.0.0.0" />
+	  Publisher="CN=DATAINDUSTRY"
+	  Version="1.0.1.0" />
 
 	<mp:PhoneIdentity PhoneProductId="af16f2a1-f320-4680-a2b9-4a042ddc5cce" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
 	<Properties>
-		<DisplayName>PocketTDPControlWidget</DisplayName>
-		<PublisherDisplayName>ryu</PublisherDisplayName>
+		<DisplayName>Pocket TDP Control Widget</DisplayName>
+		<PublisherDisplayName>DATAINDUSTRY</PublisherDisplayName>
 		<Logo>Assets\StoreLogo.png</Logo>
 	</Properties>
 
